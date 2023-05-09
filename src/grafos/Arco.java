@@ -29,4 +29,8 @@ public class Arco<T> {
         return etiqueta;
     }
 
+    public boolean equals(Arco<T> other){
+        return other.getVerticeOrigen() == verticeOrigen && other.getVerticeDestino() == verticeDestino;
+    }
+
 }
