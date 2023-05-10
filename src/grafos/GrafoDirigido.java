@@ -10,6 +10,12 @@ public class GrafoDirigido<T> implements Grafo<T> {
     private int cantVertices;
     private int cantArcos;
 
+    public GrafoDirigido(){
+        this.vertices = new HashMap<>();
+        this.cantVertices = 0;
+        this.cantArcos = 0;
+    }
+
     /**
      * Complejidad: en general, O(1) porque traduce el ID a una dirección de memoria
      * utilizando una función de hash.
@@ -77,6 +83,7 @@ public class GrafoDirigido<T> implements Grafo<T> {
                 if(arco.getVerticeDestino() == verticeId2){
                     arr.remove(arco);
                     cantArcos--;
+                    break;
                 }
             }
         }
@@ -96,6 +103,9 @@ public class GrafoDirigido<T> implements Grafo<T> {
      */
     @Override
     public boolean existeArco(int verticeId1, int verticeId2) {
+        if (!vertices.containsKey(verticeId1) || !vertices.containsKey(verticeId2)){
+            return false;
+        }
         for(Arco<T> arco : vertices.get(verticeId1)){
             if(arco.getVerticeDestino() == verticeId2){
                 return true;
@@ -109,6 +119,9 @@ public class GrafoDirigido<T> implements Grafo<T> {
      */
     @Override
     public Arco<T> obtenerArco(int verticeId1, int verticeId2) {
+        if (!vertices.containsKey(verticeId1) || !vertices.containsKey(verticeId2)){
+            return null;
+        }
         for(Arco<T> arco : vertices.get(verticeId1)){
             if(arco.getVerticeDestino() == verticeId2){
                 return arco;
