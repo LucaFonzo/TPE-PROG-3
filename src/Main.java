@@ -1,5 +1,7 @@
 import grafos.Arco;
 import grafos.GrafoDirigido;
+import servicios.ServicioBFS;
+import servicios.ServicioDFS;
 
 import java.util.Iterator;
 
@@ -8,20 +10,24 @@ public class Main {
 
         GrafoDirigido grafo = new GrafoDirigido();
 
-
         //Añadir vertices
         grafo.agregarVertice(1);
         grafo.agregarVertice(2);
         grafo.agregarVertice(3);
         grafo.agregarVertice(4);
         grafo.agregarVertice(5);
+        grafo.agregarVertice(6);
+        grafo.agregarVertice(7);
         System.out.println("Cant vertices: "  + grafo.cantidadVertices()); // 5
         //Añadir arcos
         grafo.agregarArco(1,5,0);
         grafo.agregarArco(1,2,0);
         grafo.agregarArco(2,3,0);
         grafo.agregarArco(3,5,0);
+        grafo.agregarArco(2,6,0);
+        grafo.agregarArco(3,7,0);
         System.out.println("Cant arcos: " + grafo.cantidadArcos()); // 4
+        /*
         //Borrar un vertice
         grafo.borrarVertice(1);
         System.out.println("Cant vertcies: " + grafo.cantidadVertices()); // 4
@@ -57,5 +63,11 @@ public class Main {
         while (iteratorArcosPorID.hasNext()){
             System.out.println("Arco: " + iteratorArcosPorID.next());
         }
+        */
+        ServicioBFS bfs = new ServicioBFS(grafo);
+        System.out.println(bfs.bfsForest());
+
+        ServicioDFS dfs = new ServicioDFS(grafo);
+        System.out.println(dfs.dfsForest());
     }
 }
