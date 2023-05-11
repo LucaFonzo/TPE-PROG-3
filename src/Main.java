@@ -1,6 +1,7 @@
 import grafos.Arco;
 import grafos.GrafoDirigido;
 import servicios.ServicioBFS;
+import servicios.ServicioCaminos;
 import servicios.ServicioDFS;
 
 import java.util.Iterator;
@@ -18,7 +19,9 @@ public class Main {
         grafo.agregarVertice(5);
         grafo.agregarVertice(6);
         grafo.agregarVertice(7);
-        System.out.println("Cant vertices: "  + grafo.cantidadVertices()); // 5
+        grafo.agregarVertice(8);
+        grafo.agregarVertice(9);
+        System.out.println("Cant vertices: "  + grafo.cantidadVertices()); // 9
         //Añadir arcos
         grafo.agregarArco(1,5,0);
         grafo.agregarArco(1,2,0);
@@ -26,15 +29,18 @@ public class Main {
         grafo.agregarArco(3,5,0);
         grafo.agregarArco(2,6,0);
         grafo.agregarArco(3,7,0);
-        System.out.println("Cant arcos: " + grafo.cantidadArcos()); // 4
+        grafo.agregarArco(7,8,0);
+        grafo.agregarArco(8,9,0);
+        grafo.agregarArco(5,9,0);
+        System.out.println("Cant arcos: " + grafo.cantidadArcos());
         /*
         //Borrar un vertice
         grafo.borrarVertice(1);
-        System.out.println("Cant vertcies: " + grafo.cantidadVertices()); // 4
-        System.out.println("Cant arcos: " + grafo.cantidadArcos()); // 2
+        System.out.println("Cant vertcies: " + grafo.cantidadVertices());
+        System.out.println("Cant arcos: " + grafo.cantidadArcos());
         //Borrar un arco
         grafo.borrarArco(2,3);
-        System.out.println("Cant arcos: " + grafo.cantidadArcos()); // 1
+        System.out.println("Cant arcos: " + grafo.cantidadArcos());
         //Contiene Vertice
         System.out.println("Contiene vertice 1: " + grafo.contieneVertice(1));
         System.out.println("Contiene vertice 2: " + grafo.contieneVertice(3));
@@ -69,5 +75,8 @@ public class Main {
 
         ServicioDFS dfs = new ServicioDFS(grafo);
         System.out.println(dfs.dfsForest());
+
+        ServicioCaminos servCaminos = new ServicioCaminos(grafo, 1, 9, 6);
+        System.out.println(servCaminos.caminos());
     }
 }
