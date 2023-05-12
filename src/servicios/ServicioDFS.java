@@ -14,11 +14,6 @@ public class ServicioDFS {
         this.grafo = grafo;
     }
 
-    /**
-     * Complejidad: O(V^2*A) porque el anidamiento se interpreta como una
-     * multiplicación mientras que los bucles secuenciales se interpretan como sumas:
-     * O( V * ( V + A * V) ) = O(V^2 + V^2*A) = O(V^2*A).
-     */
     public List<Integer> dfsForest() {
         ArrayList<Integer> lista = new ArrayList<>();
         Iterator<Integer> vertices = grafo.obtenerVertices();

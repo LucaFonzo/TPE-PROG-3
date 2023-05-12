@@ -22,11 +22,6 @@ public class ServicioBFS {
         Iterator<Integer> vertices = grafo.obtenerVertices();
         Iterator<Integer> adyacentes;
 
-        /**
-         * Complejidad: O(V^2*A) porque el anidamiento se interpreta como una
-         * multiplicación mientras que los bucles secuenciales se interpretan como sumas:
-         * O( V * ( V + V * A ) ) = O(V^2 + V^2*A) = O(V^2*A).
-         */
         while(vertices.hasNext()){ //O(V)
             Integer current = vertices.next();
 

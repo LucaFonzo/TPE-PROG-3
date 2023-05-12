@@ -23,11 +23,6 @@ public class ServicioCaminos {
         this.lim = lim;
     }
 
-
-    /**
-     * Complejidad: O(V*A) porque el anidamiento del primer while, que es O(V), y el segundo while, que es O(A)
-     * se interpreta como una multiplicación.
-     */
     public List<List<Integer>> caminos() {
         List<List<Integer>> caminos = new ArrayList<>();
         LinkedList<ArrayList<Integer>> fila = new LinkedList<>();

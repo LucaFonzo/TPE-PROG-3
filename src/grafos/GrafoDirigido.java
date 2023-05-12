@@ -182,14 +182,12 @@ public class GrafoDirigido<T> implements Grafo<T> {
     }
 
     /**
-     * Complejidad: O(A) porque en el constructor del ArrayList se le pasa por parámetro una colección y tiene
-     * que copiar cada uno de los elementos de la colección, que es la lista de arcos del vértice con ID "verticeId".
-     * Por ende, si en el peor caso dicho vértice tiene todos los arcos, la complejidad temporal es O(A).
+     * Complejidad: O(1) porque se obtiene el iterator del arraylist
+     * de los arcos del vertice
      */
     @Override
     public Iterator<Arco<T>> obtenerArcos(int verticeId) {
-        ArrayList<Arco<T>> array = new ArrayList<>(vertices.get(verticeId));
-        return array.iterator();
+        return vertices.get(verticeId).iterator();
     }
 
 }
