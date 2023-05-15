@@ -22,16 +22,16 @@ public class ServicioBFS {
         Iterator<Integer> vertices = grafo.obtenerVertices();
         Iterator<Integer> adyacentes;
 
-        while(vertices.hasNext()){ //O(V)
+        while(vertices.hasNext()){
             Integer current = vertices.next();
 
-            if(!lista.contains(current)){ //O(V)
+            if(!lista.contains(current)){
                 lista.add(current);
                 fila.addLast(current);
             }
-            while(!fila.isEmpty()){ //O(V)
+            while(!fila.isEmpty()){
                 adyacentes = grafo.obtenerAdyacentes(fila.pop());
-                while(adyacentes.hasNext()){ //O(A)
+                while(adyacentes.hasNext()){
                     Integer adyacente = adyacentes.next();
                     if(!lista.contains(adyacente)){
                         lista.add(adyacente);

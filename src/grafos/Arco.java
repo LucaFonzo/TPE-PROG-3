@@ -33,4 +33,8 @@ public class Arco<T> {
         return other.getVerticeOrigen() == verticeOrigen && other.getVerticeDestino() == verticeDestino;
     }
 
+    public String toString(){
+        return "(O: " + verticeOrigen + ", D: " + verticeDestino + ", Et.: " + etiqueta + ")";
+    }
+
 }

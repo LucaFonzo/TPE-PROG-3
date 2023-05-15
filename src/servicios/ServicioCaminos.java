@@ -30,7 +30,7 @@ public class ServicioCaminos {
         comienzo.add(origen);
         fila.add(comienzo);
 
-        while(!fila.isEmpty()){ //O(V) (peor caso visito todos los vértices)
+        while(!fila.isEmpty()){
             ArrayList<Integer> caminoActual = fila.pop();
             Integer actual = caminoActual.get(caminoActual.size() - 1);
 
@@ -43,7 +43,7 @@ public class ServicioCaminos {
             }
 
             Iterator<Integer> adyacentes = grafo.obtenerAdyacentes(actual);
-            while(adyacentes.hasNext()){ // O(A) (peor caso pasa por todos los arcos)
+            while(adyacentes.hasNext()){
                 Integer adyacente = adyacentes.next();
                 ArrayList<Integer> nuevaRama = new ArrayList<>(caminoActual);
                 nuevaRama.add(adyacente);

@@ -41,13 +41,7 @@ public class GrafoDirigido<T> implements Grafo<T> {
             cantVertices--;
             cantArcos -= arcosBorrados;
             for(ArrayList<Arco<T>> arr : vertices.values()){
-                for(Arco<T> arco : arr){
-                    if(arco.getVerticeDestino() == verticeId){
-                        arr.remove(arco);
-                        cantArcos--;
-                        break;
-                    }
-                }
+                __borrarArco(verticeId, (ArrayList<Arco<T>>) arr);
             }
         }
     }
@@ -79,12 +73,18 @@ public class GrafoDirigido<T> implements Grafo<T> {
     public void borrarArco(int verticeId1, int verticeId2) {
         if(vertices.containsKey(verticeId1)){
             ArrayList<Arco<T>> arr = vertices.get(verticeId1);
-            for(Arco<T> arco : arr){
-                if(arco.getVerticeDestino() == verticeId2){
-                    arr.remove(arco);
-                    cantArcos--;
-                    break;
-                }
+            __borrarArco(verticeId2, (ArrayList<Arco<T>>) arr);
+        }
+    }
+
+    private void __borrarArco(int verticeId2, ArrayList<Arco<T>> arr) {
+        Iterator<Arco<T>> iterator = arr.iterator();
+        while(iterator.hasNext()){
+            Arco<T> arco = iterator.next();
+            if(arco.getVerticeDestino() == verticeId2){
+                iterator.remove();
+                cantArcos--;
+                return;
             }
         }
     }

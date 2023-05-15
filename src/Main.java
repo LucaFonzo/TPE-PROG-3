@@ -32,11 +32,12 @@ public class Main {
         grafo.agregarArco(7,8,0);
         grafo.agregarArco(8,9,0);
         grafo.agregarArco(5,9,0);
-        System.out.println("Cant arcos: " + grafo.cantidadArcos());
+
         /*
+        System.out.println("Cant arcos: " + grafo.cantidadArcos());
         //Borrar un vertice
         grafo.borrarVertice(1);
-        System.out.println("Cant vertcies: " + grafo.cantidadVertices());
+        System.out.println("Cant vertices: " + grafo.cantidadVertices());
         System.out.println("Cant arcos: " + grafo.cantidadArcos());
         //Borrar un arco
         grafo.borrarArco(2,3);
@@ -69,14 +70,13 @@ public class Main {
         while (iteratorArcosPorID.hasNext()){
             System.out.println("Arco: " + iteratorArcosPorID.next());
         }
-        */
+
         ServicioBFS bfs = new ServicioBFS(grafo);
         System.out.println(bfs.bfsForest());
 
         ServicioDFS dfs = new ServicioDFS(grafo);
         System.out.println(dfs.dfsForest());
-
-        ServicioCaminos servCaminos = new ServicioCaminos(grafo, 1, 9, 6);
-        System.out.println(servCaminos.caminos());
+         */
+        
     }
 }
