@@ -20,12 +20,14 @@ public class Greedy {
         return ciclos;
     }
 
+    //O(n+n^2) = O(n^2)
     public List<Arco<Integer>> greedy(){
         ArrayList<Arco<Integer>> solucion = new ArrayList<>();
         ciclos = 0;
         Hashtable<Integer, Integer> noVisitados = new Hashtable<>();
         Iterator<Integer> vertices = grafo.obtenerVertices();
 
+        //O(n)
         while(vertices.hasNext()){
             Integer vertice = vertices.next();
             noVisitados.put(vertice, vertice);
@@ -33,6 +35,7 @@ public class Greedy {
         }
 
         vertices = grafo.obtenerVertices();
+        //O(n^2) porque se llama n veces a seleccionar que es de orden n
         while(vertices.hasNext()){
             Integer vertice = vertices.next();
             noVisitados.remove(vertice);
@@ -48,6 +51,7 @@ public class Greedy {
     public Arco<Integer> seleccionar(Integer vertice, Hashtable<Integer, Integer> noVisitados){
         Arco<Integer> seleccionado = null;
         Iterator<Integer> noVisitadosIterator = noVisitados.values().iterator();
+        //O(n)
         while(noVisitadosIterator.hasNext()){
             Arco<Integer> arco = grafo.obtenerArco(vertice, noVisitadosIterator.next());
             if((seleccionado == null) || (arco.getEtiqueta() < seleccionado.getEtiqueta())){
