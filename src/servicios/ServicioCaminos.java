@@ -2,10 +2,7 @@ package servicios;
 
 import grafos.Grafo;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 
 public class ServicioCaminos {
@@ -27,8 +24,10 @@ public class ServicioCaminos {
         List<List<Integer>> caminos = new ArrayList<>();
         LinkedList<ArrayList<Integer>> fila = new LinkedList<>();
         ArrayList<Integer> comienzo = new ArrayList<>();
+        Hashtable<Integer, Integer> visitados = new Hashtable<>();
         comienzo.add(origen);
         fila.add(comienzo);
+        visitados.put(origen, origen);
 
         while(!fila.isEmpty()){
             ArrayList<Integer> caminoActual = fila.pop();
@@ -45,9 +44,13 @@ public class ServicioCaminos {
             Iterator<Integer> adyacentes = grafo.obtenerAdyacentes(actual);
             while(adyacentes.hasNext()){
                 Integer adyacente = adyacentes.next();
+                if(visitados.containsKey(adyacente)){
+                    continue;
+                }
                 ArrayList<Integer> nuevaRama = new ArrayList<>(caminoActual);
                 nuevaRama.add(adyacente);
                 fila.addLast(nuevaRama);
+                visitados.put(adyacente, adyacente);
             }
         }
 
