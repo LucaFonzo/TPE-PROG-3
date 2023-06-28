@@ -3,10 +3,7 @@ package servicios;
 import grafos.Arco;
 import grafos.Grafo;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class ServicioBFS {
 
@@ -18,6 +15,7 @@ public class ServicioBFS {
 
     public List<Integer> bfsForest() {
         ArrayList<Integer> lista = new ArrayList<>();
+        Hashtable<Integer, Integer> visitados = new Hashtable<>();
         LinkedList<Integer> fila = new LinkedList<>();
         Iterator<Integer> vertices = grafo.obtenerVertices();
         Iterator<Integer> adyacentes;
@@ -25,16 +23,18 @@ public class ServicioBFS {
         while(vertices.hasNext()){
             Integer current = vertices.next();
 
-            if(!lista.contains(current)){
+            if(!visitados.containsKey(current)){
                 lista.add(current);
+                visitados.put(current, current);
                 fila.addLast(current);
             }
             while(!fila.isEmpty()){
                 adyacentes = grafo.obtenerAdyacentes(fila.pop());
                 while(adyacentes.hasNext()){
                     Integer adyacente = adyacentes.next();
-                    if(!lista.contains(adyacente)){
+                    if(!visitados.containsKey(adyacente)){
                         lista.add(adyacente);
+                        visitados.put(adyacente, adyacente);
                         fila.addLast(adyacente);
                     }
                 }
