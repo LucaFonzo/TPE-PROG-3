@@ -28,6 +28,7 @@ public class Arco<T> {
     public T getEtiqueta() {
         return etiqueta;
     }
+
     @Override
     public boolean equals(Object obj){
         if (this == obj) {

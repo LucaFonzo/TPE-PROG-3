@@ -1,3 +1,5 @@
+import grafos.GrafoNoDirigido;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -6,11 +8,12 @@ import java.util.ArrayList;
 
 
 public class CSVReader {
-
+	private GrafoNoDirigido<Integer> grafo;
 	private String path;
 	
-	public CSVReader(String path) {
+	public CSVReader(String path, GrafoNoDirigido<Integer> grafo) {
 		this.path = path;
+		this.grafo = grafo;
 	}
 	
 	public void read() {
@@ -26,7 +29,9 @@ public class CSVReader {
 			Integer destino = Integer.parseInt(line[1].trim().substring(1));
 			Integer etiqueta = Integer.parseInt(line[2].trim());
 			
-			// Aca instanciar lo que necesiten en base a los datos leidos
+			grafo.agregarVertice(origen);
+			grafo.agregarVertice(destino);
+			grafo.agregarArco(origen, destino, etiqueta);
 		}
 		
 	}
