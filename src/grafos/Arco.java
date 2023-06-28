@@ -28,9 +28,16 @@ public class Arco<T> {
     public T getEtiqueta() {
         return etiqueta;
     }
-
-    public boolean equals(Arco<T> other){
-        return other.getVerticeOrigen() == verticeOrigen && other.getVerticeDestino() == verticeDestino;
+    @Override
+    public boolean equals(Object obj){
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        Arco<T> other = (Arco<T>) obj;
+        return other.getVerticeOrigen() == this.verticeOrigen && other.getVerticeDestino() == this.verticeDestino;
     }
 
     public String toString(){
