@@ -41,7 +41,7 @@ public class Arco<T> {
     }
 
     public String toString(){
-        return "(O: " + verticeOrigen + ", D: " + verticeDestino + ", Et.: " + etiqueta + ")";
+        return "(Origen: " + verticeOrigen + ", Destino: " + verticeDestino + ", Etiqueta: " + etiqueta + ")";
     }
 
 }
