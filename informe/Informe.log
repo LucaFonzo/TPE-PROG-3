@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.28)  28 JUN 2023 20:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.28)  29 JUN 2023 17:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -511,36 +511,25 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 44.
 (C:\Users\Nestor\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (1.21141pt too wide) in paragraph at lines 55--56
-\OT1/cmr/bx/n/10 Complejidad tem-po-ral. \OT1/cmr/m/n/10 Co-mo con-se-cuen-cia 
-del fun-cio-na-mien-to del al-go-rit-mo, la es-tra-te-gia greedy
- []
-
 [1
 
 {C:/Users/Nestor/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Overfull \hbox (1.21141pt too wide) in paragraph at lines 61--62
-\OT1/cmr/bx/n/10 Complejidad tem-po-ral. \OT1/cmr/m/n/10 Co-mo con-se-cuen-cia 
-del fun-cio-na-mien-to del al-go-rit-mo, la es-tra-te-gia greedy
- []
-
-
-Overfull \hbox (21.48615pt too wide) in paragraph at lines 72--72
+Overfull \hbox (21.48615pt too wide) in paragraph at lines 74--74
 []|\OT1/cmr/m/n/10 Greedy 
  []
 
 
-Overfull \hbox (16.17181pt too wide) in paragraph at lines 72--72
+Overfull \hbox (16.17181pt too wide) in paragraph at lines 74--74
 \OML/cmm/m/it/10 O\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n[]\OT1/cmr/m/n/10 )$|  
  []
 
 
-Overfull \hbox (47.11124pt too wide) in paragraph at lines 74--74
+Overfull \hbox (47.11124pt too wide) in paragraph at lines 76--76
 []|\OT1/cmr/m/n/10 Backtracking 
  []
 
 
-Overfull \hbox (14.46347pt too wide) in paragraph at lines 74--74
+Overfull \hbox (14.46347pt too wide) in paragraph at lines 76--76
 \OML/cmm/m/it/10 O\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 !)$|  
  []
 
@@ -552,10 +541,10 @@ Package rerunfilecheck Info: File `Informe.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 13596 strings out of 478582
- 213478 string characters out of 2843872
+ 13598 strings out of 478582
+ 213494 string characters out of 2843872
  716687 words of memory out of 3000000
- 31596 multiletter control sequences out of 15000+600000
+ 31598 multiletter control sequences out of 15000+600000
  477468 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,12n,63p,787b,390s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -570,7 +559,7 @@ Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Ne
 stor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C
 :/Users/Nestor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmt
 i10.pfb>
-Output written on Informe.pdf (2 pages, 121944 bytes).
+Output written on Informe.pdf (2 pages, 123746 bytes).
 PDF statistics:
  71 PDF objects out of 1000 (max. 8388607)
  11 named destinations out of 1000 (max. 500000)

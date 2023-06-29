@@ -1,3 +1,4 @@
+import algoritmos.Backtracking;
 import algoritmos.Greedy;
 import grafos.Arco;
 import grafos.GrafoNoDirigido;
@@ -13,12 +14,22 @@ public class Main {
         CSVReader reader = new CSVReader("src\\datasets\\dataset3.txt", grafo);
         reader.read();
 
+        Backtracking backtracking = new Backtracking(grafo);
+        timer.start();
+        List<Arco<Integer>> solucion = backtracking.backtracking();
+        double tiempo = timer.stop();
+        int ciclos = backtracking.getCiclos();
+        imprimirSolucion("Backtracking", solucion, tiempo, ciclos);
+
+        System.out.println("--------------------------------------------------");
+
         Greedy greedy = new Greedy(grafo);
         timer.start();
-        List<Arco<Integer>> solucion = greedy.greedy();
-        double tiempo = timer.stop();
-        int ciclos = greedy.getCiclos();
+        solucion = greedy.greedy();
+        tiempo = timer.stop();
+        ciclos = greedy.getCiclos();
         imprimirSolucion("Greedy", solucion, tiempo, ciclos);
+
     }
 
     public static void imprimirSolucion(String algoritmo, List<Arco<Integer>> solucion, double tiempo, int ciclos) {
@@ -36,7 +47,7 @@ public class Main {
     	}
         System.out.println(algoritmo);
         System.out.println(resultado);
-        System.out.println(distancia);
+        System.out.println(distancia + " km");
         System.out.println(ciclos + " ciclos en un tiempo total de ejecución de " + tiempo + "ms");
     }
 }

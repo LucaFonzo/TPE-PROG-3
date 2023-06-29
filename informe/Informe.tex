@@ -52,13 +52,15 @@
 	
 	\textbf{Estrategia.} La estrategia empleada para la implementación del algoritmo greedy consistió en, para cada vértice, realizar la selección del arco más corto siempre y cuando dicho arco no tuviera como destino un vértice con un arco ya asignado.
 	
-	\noindent\textbf{Complejidad temporal.} Como consecuencia del funcionamiento del algoritmo, la estrategia greedy hace un repaso por cada vértice y a su vez, por cada vértice, el proceso de selección repasa todos los otros vértices que aún no han sido visitados, generando así una complejidad temporal de $O(n^2)$ siendo $n$ la cantidad de vértices en el grafo.
+	\textbf{Complejidad temporal.} Como consecuencia del funcionamiento del algoritmo, la estrategia greedy hace un repaso por cada vértice y a su vez, por cada vértice, el proceso de selección repasa todos los otros vértices que aún no han sido visitados, generando así una complejidad temporal de $O(n^2)$ siendo $n$ la cantidad de vértices en el grafo.
 	
 	\subsection*{Algoritmo de backtracking}
-	%Rellenar
-	\textbf{Estrategia.} La estrategia empleada para la implementación del algoritmo greedy consistió en, para cada vértice, realizar la selección del arco más corto siempre y cuando dicho arco no tuviera como destino un vértice con un arco ya asignado previamente.
+
+	\textbf{Estrategia.} La estrategia consistió en construir una solución seleccionando un túnel por cada estación de forma sucesiva hasta quedarse sin estaciones que conectar. El carácter recursivo de la implementación con la estrategia de backtracking asegura la construcción de todas las combinaciones posibles de $n-1$ túneles para $n$ estaciones. Como el problema se trata de minimizar la distancia total, la condición fundamental de poda es asegurar que la construcción actual sea más corta que la última solución encontrada, pues de lo contrario no tiene sentido seguir construyendo: las distancias son cantidades siempre positivas. 
 	
-	\noindent\textbf{Complejidad temporal.} Como consecuencia del funcionamiento del algoritmo, la estrategia greedy hace un repaso por cada vértice y a su vez, por cada vértice, el proceso de selección repasa todos los otros vértices que aún no han sido visitados, generando así una complejidad temporal de $O(n^2)$ siendo $n$ la cantidad de vértices en el grafo.
+	[PONER UN ÁRBOL DE BÚSQUEDA ACÁ]
+	
+	\textbf{Complejidad temporal.} 
 	
 	\section*{Análisis}
 	El cuadro \ref{table} muestra una tabla comparativa con las diferencias entre los algoritmos con estrategias \textit{greedy} y \textit{backtracking}, analizando el tiempo de ejecución y la cantidad de ciclos, además de la complejidad computacional teórica.
