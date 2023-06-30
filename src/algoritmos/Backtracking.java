@@ -35,16 +35,17 @@ public class Backtracking {
         while(vertices.hasNext()){
             Integer v = vertices.next();
             sinVisitar.remove(v);
-            backtracking(solucionParcial, sinVisitar, 0, v);
+            backtracking(solucionParcial, sinVisitar, 0, v, null);
             sinVisitar.put(v, v);
         }
         return solucionActual;
     }
-    //ARREGLARLO PARA QUE VOLVER AL ANTERIOR TAMBIÉN SEA UNA OPCIÓN DE BACKTRACKING
+
     public void backtracking(ArrayList<Arco<Integer>> solucionParcial,
                                                  Hashtable<Integer, Integer> noVisitados,
                                                  int distanciaParcial,
-                                                 Integer verticeActual){
+                                                 Integer verticeActual,
+                                                 Integer verticeAnterior){
         this.ciclos++;
         noVisitados.remove(verticeActual);
         if(noVisitados.isEmpty() && distanciaParcial < this.distanciaActual){
@@ -53,14 +54,21 @@ public class Backtracking {
             return;
         }
 
+        //Explora la opción de volver al anterior
+        if(verticeAnterior != null){
+            backtracking(solucionParcial, new Hashtable<Integer, Integer>(noVisitados), distanciaParcial, verticeAnterior, null);
+        }
+        //Explora la opción de ir por el resto de los nodos que están aún sin visitar
         for (Integer noVisitado : noVisitados.keySet()) {
             Arco<Integer> arco = grafo.obtenerArco(verticeActual, noVisitado);
             if (distanciaParcial + arco.getEtiqueta() < this.distanciaActual) {
                 solucionParcial.add(arco);
-                backtracking(solucionParcial, new Hashtable<Integer, Integer>(noVisitados), distanciaParcial + arco.getEtiqueta(), noVisitado);
+                backtracking(solucionParcial, new Hashtable<Integer, Integer>(noVisitados), distanciaParcial + arco.getEtiqueta(), noVisitado, verticeActual);
                 solucionParcial.remove(arco);
             }
         }
+
+
     }
 }
 

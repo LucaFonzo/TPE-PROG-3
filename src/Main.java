@@ -11,7 +11,7 @@ public class Main {
         Timer timer = new Timer();
 
         GrafoNoDirigido<Integer> grafo = new GrafoNoDirigido<>();
-        CSVReader reader = new CSVReader("src\\datasets\\dataset3.txt", grafo);
+        CSVReader reader = new CSVReader("src\\datasets\\dataset2.txt", grafo);
         reader.read();
 
         Backtracking backtracking = new Backtracking(grafo);
