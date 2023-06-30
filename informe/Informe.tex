@@ -56,7 +56,7 @@
 	
 	\subsection*{Algoritmo de backtracking}
 
-	\textbf{Estrategia.} La estrategia consistió en construir una solución seleccionando un túnel por cada estación de forma sucesiva hasta quedarse sin estaciones que conectar. Dentro de la lista de posibles túneles a construir para cada estación, están los que llevan a cualquier estación sin túnel o bien el túnel ya construido que vuelve inmediatamente hacia la estación anterior (esto evita los ciclos en el grafo, que implicarían la construcción de túneles de más). 
+	\textbf{Estrategia.} La estrategia consistió en construir una solución seleccionando un túnel por cada estación de forma sucesiva hasta quedarse sin estaciones que conectar. Dentro de cada paso, el algoritmo explora dos opciones: por un lado, si es posible, elige volver a la estación anterior sin construir ningún túnel. Por el otro, explora la construcción de un túnel nuevo hacia una estación que esté aún sin visitar (esto evita los ciclos en el grafo, que implicarían la construcción de túneles de más). 
 	
 	El carácter recursivo de la implementación con la estrategia de backtracking asegura la construcción de todas las combinaciones posibles de $n-1$ túneles para $n$ estaciones, visitando una por vez. Como el problema se trata de minimizar la distancia total, la condición fundamental de poda es asegurar que la construcción actual sea más corta que la última solución encontrada, pues de lo contrario no tiene sentido seguir construyendo: las distancias son cantidades siempre positivas. 
 	
