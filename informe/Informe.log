@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.28)  30 JUN 2023 20:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.28)  1 JUL 2023 14:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -73,7 +73,20 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 
 (C:\Users\Nestor\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)
 )
-(C:\Users\Nestor\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
+(C:\Users\Nestor\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip49
+\f@nch@O@elh=\skip50
+\f@nch@O@erh=\skip51
+\f@nch@O@olh=\skip52
+\f@nch@O@orh=\skip53
+\f@nch@O@elf=\skip54
+\f@nch@O@erf=\skip55
+\f@nch@O@olf=\skip56
+\f@nch@O@orf=\skip57
+) (C:\Users\Nestor\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.st
+y
 Package: csquotes 2021-02-22 v5.2l context-sensitive quotations (JAW)
 \csq@reset=\count197
 \csq@gtype=\count198
@@ -82,7 +95,6 @@ Package: csquotes 2021-02-22 v5.2l context-sensitive quotations (JAW)
 \csq@maxlvl=\count267
 \csq@tshold=\count268
 \csq@ltx@everypar=\toks20
-
 (C:\Users\Nestor\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
 File: csquotes.def 2021-02-22 v5.2l csquotes generic definitions (JAW)
 )
@@ -115,7 +127,7 @@ File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 )
 (C:\Users\Nestor\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2021/10/15 v2.17l AMS math features
-\@mathmargin=\skip49
+\@mathmargin=\skip58
 
 For additional information on amsmath, use the `?' option.
 (C:\Users\Nestor\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
@@ -165,8 +177,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \totwidth@=\dimen156
 \lineht@=\dimen157
 \@envbody=\toks24
-\multlinegap=\skip50
-\multlinetaggap=\skip51
+\multlinegap=\skip59
+\multlinetaggap=\skip60
 \mathdisplay@stack=\toks25
 LaTeX Info: Redefining \[ on input line 2938.
 LaTeX Info: Redefining \] on input line 2939.
@@ -305,7 +317,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 85.
 )
-\Hy@SectionHShift=\skip52
+\Hy@SectionHShift=\skip61
 )
 (C:\Users\Nestor\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
 Package: babel 2022/02/26 3.73 The Babel package
@@ -336,9 +348,9 @@ Package babel Info: Making > an active character on input line 722.
 ))
 (C:\Users\Nestor\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
-\multirow@colwidth=\skip53
+\multirow@colwidth=\skip62
 \multirow@cntb=\count294
-\multirow@dima=\skip54
+\multirow@dima=\skip63
 \bigstrutjot=\dimen163
 ) (C:\Users\Nestor\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.st
 y
@@ -396,24 +408,24 @@ LaTeX Info: Redefining \% on input line 25.
 )
 \openout1 = `Informe.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -475,7 +487,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 42.
+Package hyperref Info: Link coloring OFF on input line 44.
 
 (C:\Users\Nestor\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -489,23 +501,29 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count310
 )
-LaTeX Info: Redefining \ref on input line 42.
-LaTeX Info: Redefining \pageref on input line 42.
-LaTeX Info: Redefining \nameref on input line 42.
+LaTeX Info: Redefining \ref on input line 44.
+LaTeX Info: Redefining \pageref on input line 44.
+LaTeX Info: Redefining \nameref on input line 44.
  (Informe.out) (Informe.out)
 \@outlinefile=\write3
 \openout3 = `Informe.out'.
 
-LaTeX Info: Redefining \. on input line 42.
-LaTeX Info: Redefining \% on input line 42.
+LaTeX Info: Redefining \. on input line 44.
+LaTeX Info: Redefining \% on input line 44.
 \c@lstlisting=\count311
-LaTeX Font Info:    Trying to load font information for U+msa on input line 44.
 
+
+Package fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less.
+(fancyhdr)                Please consider using the `twoside' option on input l
+ine 48.
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 52.
 
 (C:\Users\Nestor\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 44.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 52.
 
 
 (C:\Users\Nestor\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -514,38 +532,35 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [1
 
 {C:/Users/Nestor/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-<Árbol de exploración.png, id=21, 1927.2pt x 1027.84pt>
+<Árbol de exploración.png, id=19, 1927.2pt x 1027.84pt>
 File: Árbol de exploración.png Graphic file (type png)
 <use Árbol de exploración.png>
-Package pdftex.def Info: Árbol de exploración.png  used on input line 63.
+Package pdftex.def Info: Árbol de exploración.png  used on input line 74.
 (pdftex.def)             Requested size: 346.88104pt x 185.00322pt.
 
-Overfull \hbox (21.48615pt too wide) in paragraph at lines 81--81
+Overfull \hbox (21.48615pt too wide) in paragraph at lines 92--92
 []|\OT1/cmr/m/n/10 Greedy 
  []
 
 
-Overfull \hbox (16.17181pt too wide) in paragraph at lines 81--81
+Overfull \hbox (16.17181pt too wide) in paragraph at lines 92--92
 \OML/cmm/m/it/10 O\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n[]\OT1/cmr/m/n/10 )$|  
  []
 
 
-Overfull \hbox (47.11124pt too wide) in paragraph at lines 83--83
+Overfull \hbox (47.11124pt too wide) in paragraph at lines 94--94
 []|\OT1/cmr/m/n/10 Backtracking 
  []
 
 
-Overfull \hbox (14.46347pt too wide) in paragraph at lines 83--83
+Overfull \hbox (14.46347pt too wide) in paragraph at lines 94--94
 \OML/cmm/m/it/10 O\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 !)$|  
  []
 
 
-Overfull \hbox (30.5608pt too wide) in paragraph at lines 77--86
+Overfull \hbox (30.5608pt too wide) in paragraph at lines 88--97
  [][] 
  []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [2 <./Árbol de exploración.png (PNG copy)>] [3] (Informe.aux
 LaTeX Info: Redefining \. on input line 25.
@@ -555,13 +570,13 @@ Package rerunfilecheck Info: File `Informe.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 13609 strings out of 478582
- 213733 string characters out of 2843872
- 716687 words of memory out of 3000000
- 31605 multiletter control sequences out of 15000+600000
+ 13796 strings out of 478582
+ 216464 string characters out of 2843872
+ 720696 words of memory out of 3000000
+ 31788 multiletter control sequences out of 15000+600000
  477468 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,12n,63p,787b,439s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 60i,12n,63p,787b,420s stack positions out of 10000i,1000n,20000p,200000b,80000s
 <C:/Users/Nestor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
 /cmbx10.pfb><C:/Users/Nestor/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
 msfonts/cm/cmbx12.pfb><C:/Users/Nestor/AppData/Local/Programs/MiKTeX/fonts/type
@@ -573,7 +588,7 @@ Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Ne
 stor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C
 :/Users/Nestor/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmt
 i10.pfb>
-Output written on Informe.pdf (3 pages, 274786 bytes).
+Output written on Informe.pdf (3 pages, 276279 bytes).
 PDF statistics:
  79 PDF objects out of 1000 (max. 8388607)
  13 named destinations out of 1000 (max. 500000)
