@@ -61,9 +61,9 @@
 	
 	\subsection*{Algoritmo greedy}
 	
-	\textbf{Estrategia.} La estrategia empleada para la implementación del algoritmo greedy consistió en seleccionar para cada vértice del grafo el arco más corto disponible; los arcos disponibles son aquellos arcos que no tuvieran como vértice destino un vértice con un arco ya asignado.
+	\textbf{Estrategia.} La estrategia empleada para la implementación del algoritmo greedy consistió en seleccionar para cada vértice del grafo el arco más corto disponible; los arcos disponibles son aquellos arcos que no tuvieran como vértice destino un vértice con un arco ya asignado. Esta estrategia casi nunca dará la solución óptima porque no tiene la capacidad de formar \textit{redes} (es decir, vértices desde los que salga más de un arco) sino únicamente \textit{caminos}, esto es, todos los vértices estarán conectados a lo largo de un único camino sin ramificaciones. La ventaja de un algoritmo como este radica únicamente en la sencillez de su implementación, respetando el principio básico de lo que se considera \textit{greedy}: elección local de la mejor opción.
 	
-	\textbf{Complejidad temporal.} Como consecuencia del funcionamiento del algoritmo, la estrategia greedy hace un repaso por cada vértice y a su vez, por cada vértice, el proceso de selección repasa todos los otros vértices que aún no han sido visitados, generando así una complejidad temporal de $O(n^2)$, de tipo polinomial, siendo $n$ la cantidad de vértices en el grafo.
+	\textbf{Complejidad temporal.} Como consecuencia del funcionamiento del algoritmo, la estrategia greedy hace un repaso por cada vértice y a su vez, por cada vértice, el proceso de selección repasa todos los otros vértices que aún no han sido visitados, generando así una complejidad temporal polinomial de $O(n^2)$, siendo $n$ la cantidad de vértices en el grafo.
 	
 	\subsection*{Algoritmo de backtracking}
 

@@ -48,11 +48,10 @@ public class Greedy {
 
     public Arco<Integer> seleccionar(Integer vertice, HashSet<Integer> noVisitados){
         Arco<Integer> seleccionado = null;
-        Iterator<Integer> noVisitadosIterator = noVisitados.iterator();
-        //O(n)
-        while(noVisitadosIterator.hasNext()){
-            Arco<Integer> arco = grafo.obtenerArco(vertice, noVisitadosIterator.next());
-            if((seleccionado == null) || (arco.getEtiqueta() < seleccionado.getEtiqueta())){
+
+        for (Integer noVisitado : noVisitados) {
+            Arco<Integer> arco = grafo.obtenerArco(vertice, noVisitado);
+            if ((seleccionado == null) || (arco.getEtiqueta() < seleccionado.getEtiqueta())) {
                 seleccionado = arco;
             }
             ciclos++;
