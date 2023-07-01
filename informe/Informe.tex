@@ -76,12 +76,12 @@
 		\label{tree}
 	\end{figure}
 	
-	\textbf{Complejidad temporal.} El carácter recursivo de la implementación con la estrategia de backtracking asegura la construcción de todas las combinaciones posibles de $n-1$ túneles para $n$ estaciones, visitando una por vez. La solución consiste en una lista de $n-1$ túneles, por lo que la cantidad de combinaciones posibles es $(n-1)!$. Como la exploración se ejecuta tomando como punto inicial a cada una de las estaciones, esto se repite $n$ veces, dando un total de $n!$ ciclos sin poda. En otras palabras, la implementación tiene una complejidad computacional $O(n!)$.
+	\textbf{Complejidad temporal.} El carácter recursivo de la implementación con la estrategia de backtracking asegura la construcción de todas las combinaciones posibles de $n-1$ túneles para $n$ estaciones, visitando una por vez. La solución consiste en una lista de $n-1$ túneles, por lo que la cantidad de permutaciones posibles es $(n-1)!$. Como la exploración se ejecuta tomando como punto inicial a cada una de las estaciones, esto se repite $n$ veces, dando un total de $n!$ ciclos sin poda. En otras palabras, la implementación tiene una complejidad computacional $O(n!)$.
 	
-	Como el problema se trata de minimizar la distancia total, la condición fundamental de poda es asegurar que la construcción actual sea más corta que la última solución encontrada, pues de lo contrario no tiene sentido seguir construyendo: las distancias son cantidades siempre positivas. Esto permite acortar el tiempo de ejecución eliminando varias exploraciones subóptimas.
+	Como en el problema se trata de minimizar la distancia total, la condición fundamental de poda es asegurar que la construcción actual sea más corta que la última solución encontrada, pues de lo contrario no tiene sentido seguir construyendo: las distancias son cantidades siempre positivas. Esto permite acortar el tiempo de ejecución eliminando varias exploraciones subóptimas.
 	
 	\section*{Análisis}
-	El cuadro \ref{table} muestra una tabla comparativa con las diferencias entre los algoritmos con estrategias \textit{greedy} y \textit{backtracking}, analizando el tiempo de ejecución y la cantidad de ciclos, además de la complejidad computacional teórica.
+	El cuadro \ref{table} muestra una tabla comparativa de los resultados y sus diferencias entre los algoritmos con estrategias \textit{greedy} y \textit{backtracking}, analizando el tiempo de ejecución y la cantidad de ciclos, además de la complejidad computacional teórica.
 	
 	\begin{table}[h!]
 		\centering
@@ -101,11 +101,11 @@
 	\section*{Conclusiones}
 	A partir de lo analizado y lo trabajado en clase, es posible llegar a las siguientes conclusiones:
 	\begin{itemize}
-		\item[$\circ$] Los algoritmos de tipo greedy pueden otorgar soluciones que están muy cerca de ser la óptima, consumiendo muchos menos recursos que su contraparte de backtracking. Sin embargo, no hay forma de saber a priori qué tan óptima es la solución, pues eso dependerá íntegramente del problema particular.
-		\item[$\circ$] Los algoritmos de backtracking aseguran la solución más óptima, por lo que si el costo computacional es pagable, podría ser preferible.
+		\item[$\circ$] Los algoritmos de tipo greedy pueden otorgar soluciones que están muy cerca de ser la óptima, consumiendo muchos menos recursos que su contraparte de backtracking. Sin embargo, no hay forma de saber a priori -en general- qué tan óptima es la solución, pues eso dependerá íntegramente del problema particular y el algoritmo implementado.
+		\item[$\circ$] Los algoritmos de backtracking aseguran la solución más óptima, por lo que si el costo computacional es pagable, pueden ser útiles.
 		\item[$\circ$] Una combinación de ambas metodologías podría permitir podar gran parte del árbol de búsqueda del algoritmo de backtracking, utilizando como filtro los resultados del algoritmo greedy.
 		\item[$\circ$] El tiempo de ejecución para los algoritmos de backtracking escala enormemente con el tamaño de la entrada, volviéndose rápidamente una estrategia inviable.
-		\item[$\circ$] El algoritmo greedy puede mejorarse considerablemente si se implementan los algoritmos de Prim o Kruskal, que además de asegurar la solución correcta, tienen complejidades de tipo logarítmica, que es mucho más deseable.
+		\item[$\circ$] Existen algoritmos de tipo greedy con estrategias considerablemente mejores que la elegida. Particularmente los algoritmos de Prim o Kruskal, que además de tener complejidades generalmente menores, aseguran la solución correcta.
 	\end{itemize}
 	
 	
