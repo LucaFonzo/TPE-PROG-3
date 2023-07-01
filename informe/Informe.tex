@@ -57,7 +57,7 @@
 	El objetivo es resolver el problema planteado mediante dos técnicas algorítmicas distintas: Backtracking y Greedy. Luego se deberán comparar los resultados teniendo en cuenta distintas métricas que permitan visualizar, mínimamente, la calidad de la solución y el costo de obtener dicha solución, con ambas técnicas.
 	\section*{Solución}
 	
-	Los objetos a ser representados -estaciones y túneles- en el sistema se adaptan perfectamente a una estructura de datos de tipo grafo. Para ello se utilizará el 
+	Los objetos a ser representados -estaciones y túneles- en el sistema se adaptan perfectamente a una estructura de datos de tipo grafo. Para ello se utilizará la estructura de datos implementada en la primera entrega del Trabajo Práctico Especial de la materia. Además, en esta estructura de grafo no dirigido, el objetivo equivale a encontrar el \textit{minimum spanning tree} o árbol expandido mínimo del grafo.
 	
 	\subsection*{Algoritmo greedy}
 	
@@ -105,6 +105,7 @@
 		\item[$\circ$] Los algoritmos de backtracking aseguran la solución más óptima, por lo que si el costo computacional es pagable, podría ser preferible.
 		\item[$\circ$] Una combinación de ambas metodologías podría permitir podar gran parte del árbol de búsqueda del algoritmo de backtracking, utilizando como filtro los resultados del algoritmo greedy.
 		\item[$\circ$] El tiempo de ejecución para los algoritmos de backtracking escala enormemente con el tamaño de la entrada, volviéndose rápidamente una estrategia inviable.
+		\item[$\circ$] El algoritmo greedy puede mejorarse considerablemente si se implementan los algoritmos de Prim o Kruskal, que además de asegurar la solución correcta, tienen complejidades de tipo logarítmica, que es mucho más deseable.
 	\end{itemize}
 	
 	
