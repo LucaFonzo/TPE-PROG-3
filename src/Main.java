@@ -9,28 +9,36 @@ import java.util.List;
 public class Main {
     public static void main(String[] args){
         Timer timer = new Timer();
+        GrafoNoDirigido<Integer> grafo;
+        CSVReader reader;
+        Greedy greedy;
+        Backtracking backtracking;
+        List<Arco<Integer>> solucion;
+        double tiempo;
+        int ciclos;
 
         //Dataset 1
         System.out.println("Dataset 1\n------------------------------------");
-        GrafoNoDirigido<Integer> grafo = new GrafoNoDirigido<>();
-        CSVReader reader = new CSVReader("src\\datasets\\dataset1.txt", grafo);
+        grafo = new GrafoNoDirigido<>();
+        reader = new CSVReader("src\\datasets\\dataset1.txt", grafo);
         reader.read();
 
-        Backtracking backtracking = new Backtracking(grafo);
-        timer.start();
-        List<Arco<Integer>> solucion = backtracking.backtracking();
-        double tiempo = timer.stop();
-        int ciclos = backtracking.getCiclos();
-        imprimirSolucion("Backtracking", solucion, tiempo, ciclos);
-
-        System.out.println("-----");
-
-        Greedy greedy = new Greedy(grafo);
+        greedy = new Greedy(grafo);
         timer.start();
         solucion = greedy.greedy();
         tiempo = timer.stop();
         ciclos = greedy.getCiclos();
         imprimirSolucion("Greedy", solucion, tiempo, ciclos);
+
+        System.out.println("-----");
+
+        backtracking = new Backtracking(grafo);
+        timer.start();
+        solucion = backtracking.backtracking();
+        tiempo = timer.stop();
+        ciclos = backtracking.getCiclos();
+        imprimirSolucion("Backtracking", solucion, tiempo, ciclos);
+
 
         //Dataset 2
         System.out.println("------------------------------------\nDataset 2\n------------------------------------");
@@ -38,6 +46,15 @@ public class Main {
         reader = new CSVReader("src\\datasets\\dataset2.txt", grafo);
         reader.read();
 
+        greedy = new Greedy(grafo);
+        timer.start();
+        solucion = greedy.greedy();
+        tiempo = timer.stop();
+        ciclos = greedy.getCiclos();
+        imprimirSolucion("Greedy", solucion, tiempo, ciclos);
+
+        System.out.println("-----");
+
         backtracking = new Backtracking(grafo);
         timer.start();
         solucion = backtracking.backtracking();
@@ -45,14 +62,6 @@ public class Main {
         ciclos = backtracking.getCiclos();
         imprimirSolucion("Backtracking", solucion, tiempo, ciclos);
 
-        System.out.println("-----");
-
-        greedy = new Greedy(grafo);
-        timer.start();
-        solucion = greedy.greedy();
-        tiempo = timer.stop();
-        ciclos = greedy.getCiclos();
-        imprimirSolucion("Greedy", solucion, tiempo, ciclos);
 
         //Dataset 3
         System.out.println("------------------------------------\nDataset 3\n------------------------------------");
@@ -60,15 +69,6 @@ public class Main {
         reader = new CSVReader("src\\datasets\\dataset3.txt", grafo);
         reader.read();
 
-        backtracking = new Backtracking(grafo);
-        timer.start();
-        solucion = backtracking.backtracking();
-        tiempo = timer.stop();
-        ciclos = backtracking.getCiclos();
-        imprimirSolucion("Backtracking", solucion, tiempo, ciclos);
-
-        System.out.println("-----");
-
         greedy = new Greedy(grafo);
         timer.start();
         solucion = greedy.greedy();
@@ -76,6 +76,14 @@ public class Main {
         ciclos = greedy.getCiclos();
         imprimirSolucion("Greedy", solucion, tiempo, ciclos);
 
+        System.out.println("-----");
+
+        backtracking = new Backtracking(grafo);
+        timer.start();
+        solucion = backtracking.backtracking();
+        tiempo = timer.stop();
+        ciclos = backtracking.getCiclos();
+        imprimirSolucion("Backtracking", solucion, tiempo, ciclos);
     }
 
     public static void imprimirSolucion(String algoritmo, List<Arco<Integer>> solucion, double tiempo, int ciclos) {

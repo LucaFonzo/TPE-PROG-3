@@ -3,7 +3,7 @@ package algoritmos;
 import grafos.Arco;
 import grafos.GrafoNoDirigido;
 import java.util.ArrayList;
-import java.util.Hashtable;
+import java.util.HashSet;
 import java.util.Iterator;
 
 public class Backtracking {
@@ -26,23 +26,22 @@ public class Backtracking {
         distanciaActual = Integer.MAX_VALUE;
         ArrayList<Arco<Integer>> solucionParcial = new ArrayList<>();
         Iterator<Integer> vertices = grafo.obtenerVertices();
-        Hashtable<Integer, Integer> sinVisitar = new Hashtable<>();
-        while(vertices.hasNext()){
-            Integer v = vertices.next();
-            sinVisitar.put(v, v);
+        HashSet<Integer> sinVisitar = new HashSet<>();
+        while(vertices.hasNext()){Integer v = vertices.next();
+            sinVisitar.add(v);
         }
         vertices = grafo.obtenerVertices();
         while(vertices.hasNext()){
             Integer v = vertices.next();
             sinVisitar.remove(v);
             backtracking(solucionParcial, sinVisitar, 0, v, null);
-            sinVisitar.put(v, v);
+            sinVisitar.add(v);
         }
         return solucionActual;
     }
 
     public void backtracking(ArrayList<Arco<Integer>> solucionParcial,
-                                                 Hashtable<Integer, Integer> noVisitados,
+                                                 HashSet<Integer> noVisitados,
                                                  int distanciaParcial,
                                                  Integer verticeActual,
                                                  Integer verticeAnterior){
@@ -56,19 +55,17 @@ public class Backtracking {
 
         //Explora la opción de volver al anterior
         if(verticeAnterior != null){
-            backtracking(solucionParcial, new Hashtable<Integer, Integer>(noVisitados), distanciaParcial, verticeAnterior, null);
+            backtracking(solucionParcial, new HashSet<Integer>(noVisitados), distanciaParcial, verticeAnterior, null);
         }
         //Explora la opción de ir por el resto de los nodos que están aún sin visitar
-        for (Integer noVisitado : noVisitados.keySet()) {
+        for (Integer noVisitado : noVisitados) {
             Arco<Integer> arco = grafo.obtenerArco(verticeActual, noVisitado);
             if (distanciaParcial + arco.getEtiqueta() < this.distanciaActual) {
                 solucionParcial.add(arco);
-                backtracking(solucionParcial, new Hashtable<Integer, Integer>(noVisitados), distanciaParcial + arco.getEtiqueta(), noVisitado, verticeActual);
+                backtracking(solucionParcial, new HashSet<Integer>(noVisitados), distanciaParcial + arco.getEtiqueta(), noVisitado, verticeActual);
                 solucionParcial.remove(arco);
             }
         }
-
-
     }
 }
 
