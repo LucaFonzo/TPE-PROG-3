@@ -67,7 +67,7 @@
 	
 	\subsection*{Algoritmo de backtracking}
 
-	\textbf{Estrategia.} La estrategia consistió en construir una solución seleccionando un túnel por cada estación de forma sucesiva hasta quedarse sin estaciones que conectar. Dentro de cada paso, el algoritmo explora dos opciones: por un lado, si es posible, elige volver a la estación anterior sin construir ningún túnel. Por el otro, explora la construcción de un túnel nuevo hacia una estación que esté aún sin visitar (esto evita los ciclos en el grafo, que implicarían la construcción de túneles de más que no aportarían una nueva conexión). Esta exploración se realiza tomando como estación inicial a cada una de las estaciones, y puede visualizarse en la Figura \ref{tree}.
+	\textbf{Estrategia.} La estrategia consistió en construir una solución seleccionando un túnel por cada estación de forma sucesiva hasta quedarse sin estaciones que conectar. Dentro de cada paso, el algoritmo explora dos opciones: por un lado, si es posible, elige volver a la estación anterior sin construir ningún túnel. Por el otro, explora la construcción de un túnel nuevo hacia una estación que esté aún sin visitar (esto evita los ciclos en el grafo, que implicarían la construcción de túneles de más que no aportarían una nueva conexión). Esta exploración se realiza tomando como estación inicial a cada una de las estaciones, y puede visualizarse en la Figura \ref{tree}. El \textit{estado} de cada ciclo queda descrito por la solución que se está construyendo, la distancia que suma dicha solución, el vértice sobre el que el algoritmo está trabajando, el vértice del ciclo anterior y los vértices aún sin visitar.
 	
 	\begin{figure}[h]
 		\centering
