@@ -33,9 +33,7 @@ public class Backtracking {
         vertices = grafo.obtenerVertices();
         while(vertices.hasNext()){
             Integer v = vertices.next();
-            sinVisitar.remove(v);
-            backtracking(solucionParcial, sinVisitar, 0, v, null);
-            sinVisitar.add(v);
+            backtracking(solucionParcial, new HashSet<>(sinVisitar), 0, v, null);
         }
         return solucionActual;
     }
